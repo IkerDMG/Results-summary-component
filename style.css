@@ -1,0 +1,223 @@
+/*
+* INIT
+*/
+
+body,
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+/*
+* CONTAINERS
+*/
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Hanken Grotesk";
+}
+
+.result-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    180deg,
+    hsl(252, 100%, 67%) 0%,
+    hsl(241, 81%, 54%) 100%
+  );
+  border-radius: 35px;
+  text-align: center;
+  color: white;
+  padding: 50px;
+}
+
+.summary-container {
+  border-radius: 35px;
+  padding: 40px;
+}
+
+/*
+* RESULT SECTION
+*/
+
+.result-score {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(241, 81%, 54%);
+  background: linear-gradient(
+    180deg,
+    hsla(256, 72%, 46%, 1) 0%,
+    hsla(241, 72%, 46%, 0) 100%
+  );
+  flex-direction: column;
+  margin: 40px;
+}
+
+.big-score {
+  font-size: 76px;
+}
+.result-description {
+  font-size: 18px;
+  width: 250px;
+}
+
+.result-text {
+  margin-bottom: 15px;
+}
+
+/*
+* SUMMARY SECTION
+*/
+
+.summary-title {
+  color: #333;
+}
+
+.summary-list li {
+  width: 250px;
+  margin: 20px 0;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: #444;
+}
+
+.summary-reaction {
+  background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+.reaction {
+  color: hsl(0, 100%, 67%);
+}
+
+.summary-memory {
+  background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+.memory {
+  color: hsl(39, 100%, 56%);
+}
+
+.summary-verbal {
+  background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+.verbal {
+  color: hsl(166, 100%, 37%);
+}
+
+.summary-visual {
+  background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+.visual {
+  color: hsl(234, 85%, 45%);
+}
+
+button {
+  background-color: hsl(224, 30%, 27%);
+  width: 100%;
+  padding: 20px;
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  border: 0;
+  border-radius: 60px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(
+    180deg,
+    hsl(252, 100%, 67%) 0%,
+    hsl(241, 81%, 54%) 100%
+  );
+}
+
+/*
+* MISCELANEUS
+*/
+
+.icon {
+  display: flex;
+}
+
+.icon span {
+  padding-left: 10px;
+}
+
+.opaque {
+  opacity: 0.6;
+}
+
+/*
+* RESPONSIVE DESIGN
+*/
+
+@media screen and (max-width: 800px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: initial;
+    align-items: initial;
+  }
+
+  .result-container {
+    border-radius: 0 0 30px 30px;
+    height: 30%;
+    font-size: 0.8rem;
+  }
+
+  .result-score {
+    width: 100px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: hsl(241, 81%, 54%);
+    background: linear-gradient(
+      180deg,
+      hsla(256, 72%, 46%, 1) 0%,
+      hsla(241, 72%, 46%, 0) 100%
+    );
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .big-score {
+    font-size: 60px;
+  }
+
+  .result-description {
+    font-size: 18px;
+    width: 300px;
+  }
+
+  .summary-container {
+    border-radius: 0;
+    padding: 30px;
+  }
+
+  .summary-list li {
+    width: initial;
+  }
+}
